@@ -1,6 +1,19 @@
 # lib-query
 
-`.hnl` package — Handl query.
+`query` — Handl query: user-space query registration and invocation algebra.
+
+## Layout
+
+```text
+handl-packages/query/   the .hnl package
+ci.sh                   bupha entry → scripts/hnl-gate.sh
+```
+
+## Gate
+
+```bash
+HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh
+```
 
 ## License
 
