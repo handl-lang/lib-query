@@ -1,0 +1,3 @@
+-- lib-query: package manifest. The .hnl source lives in the
+-- handl-packages/ layout; the override names it explicitly.
+{ modules: ["query"], entry: "handl-packages/query/index.hnl", description: "User-space query registration and invocation algebra.", license: "MIT" }
