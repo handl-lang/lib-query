@@ -32,7 +32,7 @@ export unregister: (String) ~[1]~> ()
 export names: () ~[1]~> Array
 
 --- the default `Query` handler: an ordinary arrow returning a record of operations.
-query_impl = (registry, name, args) ~> do {
+query_impl := (registry, name, args) ~> do {
   if hash_map.has(registry, name) {
     error.raise("query found but invocation not yet implemented")
   } else {
@@ -40,17 +40,17 @@ query_impl = (registry, name, args) ~> do {
   }
 }
 
-register_impl = (registry, name, handler) ~> do {
+register_impl := (registry, name, handler) ~> do {
   error.raise("query register not yet implemented")
 }
 
-has_impl = (registry, name) ~> hash_map.has(registry, name)
+has_impl := (registry, name) ~> hash_map.has(registry, name)
 
-unregister_impl = (registry, name) ~> do {
+unregister_impl := (registry, name) ~> do {
   error.raise("query unregister not yet implemented")
 }
 
-names_impl = (registry) ~> hash_map.keys(registry)
+names_impl := (registry) ~> hash_map.keys(registry)
 
 export default_handler := (registry) ~> {
   query: (name, args) ~> query_impl(registry, name, args),
