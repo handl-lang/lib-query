@@ -1,3 +1,31 @@
+# lib-query
+
+`query` — Handl query: user-space query registration and invocation
+algebra.
+
+## Layout
+
+| path | role |
+| --- | --- |
+| `handl-packages/query/index.hnl` | the .hnl package (entry named explicitly in `pkg.hnl`) |
+| `pkg.hnl` | manifest — `modules: ["query"]`, `entry: "handl-packages/query/index.hnl"` |
+| `scripts/hnl-gate.sh`, `ci.sh` | the gate / bupha entry |
+
+## Contract
+
+- No `src/` tree — the package lives entirely under
+  `handl-packages/`; `pkg.hnl`'s `entry` override names the file.
+
+## Verification
+
+```bash
+HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh
+```
+
+## License
+
+MIT.
+
 <!-- myco:agent-awareness -->
 
 ## Agent awareness
