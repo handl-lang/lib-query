@@ -12,24 +12,24 @@ export Query := sym()
 
 --- call a registered query by name with arguments.
 -- TODO(n-dim): effect row
-export query: (String, Array) ~[1]~> Value
+export query: (String, Array) ~>[1] Value
 
 --- register a named query implementation.
 -- TODO(n-dim): effect row
 -- TODO(n-dim): effect row
-export register: (String, (Array) ~[1]~> Value) ~[1]~> ()
+export register: (String, (Array) ~>[1] Value) ~>[1] ()
 
 --- test whether a named query is registered.
 -- TODO(n-dim): effect row
-export has: (String) ~[1]~> Bool
+export has: (String) ~>[1] Bool
 
 --- remove a named query from the registry.
 -- TODO(n-dim): effect row
-export unregister: (String) ~[1]~> ()
+export unregister: (String) ~>[1] ()
 
 --- list the names of registered queries.
 -- TODO(n-dim): effect row
-export names: () ~[1]~> Array
+export names: () ~>[1] Array
 
 --- the default `Query` handler: an ordinary arrow returning a record of operations.
 query_impl := (registry, name, args) ~> do {
