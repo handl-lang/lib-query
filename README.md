@@ -6,7 +6,7 @@
 
 ```text
 handl-packages/query/   the .hnl package
-ci.sh                   bupha entry → scripts/hnl-gate.sh
+workflows/gate.yaml                   bupha entry (handl-gates) → scripts/hnl-gate.sh
 ```
 
 ## Gate
