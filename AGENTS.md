@@ -9,7 +9,7 @@ algebra.
 | --- | --- |
 | `handl-packages/query/index.hnl` | the .hnl package (entry named explicitly in `pkg.hnl`) |
 | `pkg.hnl` | manifest — `modules: ["query"]`, `entry: "handl-packages/query/index.hnl"` |
-| `scripts/hnl-gate.sh`, `ci.sh` | the gate / bupha entry |
+| `scripts/hnl-gate.sh`, `workflows/gate.yaml` | the gate / bupha entry |
 
 ## Contract
 
